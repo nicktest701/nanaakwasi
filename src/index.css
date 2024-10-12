@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: "Inter", "Raleway", system-ui;
+    font-optical-sizing: auto;
+    /* font-style: normal; */
+    smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-block: 100px;
+  }
+  body {
+    /* font-size: 17px; */
+    font-weight: 300;
+    
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", "Inter", system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+      "Open Sans", "Helvetica Neue", sans-serif;
+  }
+
+  p {
+    /* font-size: 14px; */
+    font-weight: 200;
+    letter-spacing: normal;
+  }
+
+  .fade-bottom {
+    background: linear-gradient(
+      to bottom red,
+      rgba(255, 255, 255, 0.2)
+    ); /* White background */
+  }
+
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    height: 15px;
+    aspect-ratio: 4;
+    --_g: no-repeat radial-gradient(farthest-side, #5ce0e6 90%, #0000);
+    background: var(--_g) left, var(--_g) right;
+    background-size: 25% 100%;
+    display: grid;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    height: inherit;
+    aspect-ratio: 1;
+    grid-area: 1/1;
+    margin: auto;
+    border-radius: 50%;
+    transform-origin: -100% 50%;
+    background: #5ce0e6;
+    animation: l49 1s infinite linear;
+  }
+  .loader:after {
+    transform-origin: 200% 50%;
+    --s: -1;
+    animation-delay: -0.5s;
+  }
+
+  @keyframes l49 {
+    58%,
+    100% {
+      transform: rotate(calc(var(--s, 1) * 1turn));
+    }
+  }
+}
+
+@layer utilities {
+}
+
+
+/* #tsparticles { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 0; } */
