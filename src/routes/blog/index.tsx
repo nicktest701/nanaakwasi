@@ -35,7 +35,7 @@ function Blog() {
         <Title title="Blog" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-4">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <BlogCard
               key={project?.id}
               id={project?.id}

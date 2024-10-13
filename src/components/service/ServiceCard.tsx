@@ -19,7 +19,7 @@ function ServiceCard({ title, content, icon, delay }: ServiceCardProps) {
         <div className="p-8 rounded-full bg-secondary-700 border border-white/15 text-center group-hover:border-primary-500">
           {icon}
         </div>
-        <p className="text-2xl group-hover:text-primary-500">{title}</p>
+        <p className="text-2xl group-hover:text-primary-500 text-center">{title}</p>
         <p className="text-center line-clamp-4">{content}</p>
       </div>
     </div>

@@ -5,7 +5,7 @@ import Skills from "../skills";
 import Resume from "../resume";
 import Contact from "../contact";
 import Portfolio from "../portfolio";
-import Blog from "../blog";
+// import Blog from "../blog";
 import BottomFade from "@/components/bottom-fade";
 
 function Home() {

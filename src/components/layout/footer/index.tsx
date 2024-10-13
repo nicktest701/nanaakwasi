@@ -1,4 +1,4 @@
-import Content from "../content";
+
 
 function Footer() {
   return (

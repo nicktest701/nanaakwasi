@@ -19,7 +19,7 @@ function Service() {
     },
     {
       id: "4d145644-e240-4fa8-9a31-cb5e0720571c",
-      title: "Mobile App Development",
+      title: "Mobile Application Development",
       content:
         "I create powerful, intuitive mobile applications that deliver seamless user experiences across iOS and Android. Whether it's a simple app or a complex solution with offline capabilities, I ensure your mobile app meets modern standards and your business needs.",
       icon: (
@@ -29,7 +29,7 @@ function Service() {
     },
     {
       id: "42c3193f-1e67-4d8f-991f-96183a9092f1",
-      title: "Desktop Development",
+      title: "Desktop Application Development",
       content:
         "Need a desktop solution? I develop custom desktop applications that are fast, reliable, and user-friendly. Whether you’re looking for cross-platform apps or a native experience, I have the tools and expertise to build software that fits your workflow.",
       icon: (

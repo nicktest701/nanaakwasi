@@ -40,18 +40,23 @@ const Hero = () => {
     <div className="relative overflow-hidden">
       <motion.div
         id="home"
-        className=" min-h-screen bg-cover bg-center flex items-center justify-center  pt-20"
+        className="relative min-h-screen bg-cover bg-center flex items-center justify-center  pt-20"
         style={{
           backgroundImage,
         }}
       >
-        {/* Hero content */}
+        <div className="absolute inset-0 bg-cover min-h-screen opacity-10">
+          <img
+            src="/images/bg/bg-1.jpg"
+            className="w-full h-full object-cover filter grayscale"
+            alt="profile"
+          />
+        </div>
 
-        <Content
-          startDirection="left"
-          className=" w-full h-full  mx-auto  flex flex-col justify-center items-center text-center space-y-4 overflow-clip  "
-        >
-          <div className="rounded-full bg-white/20 p-2 backdrop-blur overflow-hidden flex items-center justify-center mb-8">
+        {/* {/* Hero content */}
+
+        <Content className=" w-full h-full  mx-auto  flex flex-col justify-center items-center text-center space-y-4 overflow-clip  ">
+          {/* <div className="rounded-full bg-white/20 p-2 backdrop-blur overflow-hidden flex items-center justify-center mb-8">
             <img
               src="/images/me/me-5.JPG"
               // width={160}
@@ -59,7 +64,7 @@ const Hero = () => {
               className="rounded-full size-28 md:size-44 object-cover filter grayscale"
               alt="profile"
             />
-          </div>
+          </div> */}
 
           <div className="space-y-4 my-8">
             <h1 className="text-white text-4xl md:text-6xl font-bold ">Hi, </h1>
@@ -140,9 +145,9 @@ const Hero = () => {
             whileTap={{
               scale: 0.985,
             }}
-            className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10  px-6 py-4 text-gray-50 transition-colors hover:bg-gray-950/50 "
+            className="flex justify-center gap-2 py-3 items-center mx-auto shadow-xl text-lg bg-transparent backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-primary-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
           >
-            <a href="#contact" className="flex">
+            <a href="#contact" className="flex text-white">
               Hire Me
               <MoveRight className="ml-2 transition-transform group-hover:rotate-90 group-active:-rotate-90" />
             </a>

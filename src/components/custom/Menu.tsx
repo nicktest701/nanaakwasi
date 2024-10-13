@@ -10,7 +10,7 @@ const Menu = ({ open, setOpen }: MenuProps) => {
   return (
     <MotionConfig
       transition={{
-        duration: 0.5,
+        duration: 0.3,
         ease: "easeInOut",
       }}
     >
@@ -18,7 +18,7 @@ const Menu = ({ open, setOpen }: MenuProps) => {
         initial={false}
         animate={open ? "open" : "closed"}
         onClick={() => setOpen((pv) => !pv)}
-        className="relative h-16 w-16 rounded-full bg-white/0 transition-colors hover:bg-white/20"
+        className="relative h-12 w-12 rounded-full bg-white/0 transition-colors hover:bg-white/20"
       >
         <motion.span
           variants={VARIANTS.top}

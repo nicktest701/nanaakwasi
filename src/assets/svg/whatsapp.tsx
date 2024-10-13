@@ -1,12 +1,18 @@
-import * as React from "react"
+import { SVGProps } from "react";
 
-const Whatsapp = (props) => (
+type WhatsappProps = {
+  props?: SVGProps<SVGSVGElement>;
+  className?: string;
+};
+
+const Whatsapp = ({ props, className }: WhatsappProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={100}
     height={100}
     viewBox="0 0 50 50"
     {...props}
+    className={className}
   >
     <path
       fill="#fff"
@@ -22,5 +28,5 @@ const Whatsapp = (props) => (
       transform="scale(10.66667)"
     />
   </svg>
-)
-export default Whatsapp
+);
+export default Whatsapp;

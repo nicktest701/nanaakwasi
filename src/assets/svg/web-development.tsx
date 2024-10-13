@@ -1,13 +1,19 @@
+import { SVGProps } from "react";
 
-const WebDevelopment = (props) => (
+type WebDevelopmentProps = {
+  props?: SVGProps<SVGSVGElement>;
+  className?: string;
+};
+const WebDevelopment = ({ props, className }: WebDevelopmentProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
     viewBox="0 0 496 496"
     {...props}
+    className={className}
   >
     <path d="M456 80h-48V68.688L339.312 0H88v80H40C17.944 80 0 97.944 0 120v288c0 22.056 17.944 40 40 40h104v32h-32v16h272v-16h-32v-32h104c22.056 0 40-17.944 40-40V120c0-22.056-17.944-40-40-40zM344 27.312 380.688 64H344V27.312zM360 80v112H136V48h192v32h32zM104 16h224v16H120v176h256V80h16v272H104V16zm232 464H160v-32h176v32zm144-72c0 13.232-10.768 24-24 24H40c-13.232 0-24-10.768-24-24v-8h464v8zm0-24H16V120c0-13.232 10.768-24 24-24h48v272h320V96h48c13.232 0 24 10.768 24 24v264z" />
     <path d="M248 64c-30.872 0-56 25.12-56 56s25.128 56 56 56 56-25.12 56-56-25.128-56-56-56zm0 96c-22.056 0-40-17.944-40-40s17.944-40 40-40 40 17.944 40 40-17.944 40-40 40zM120 224h256v16H120zM120 256h256v16H120zM120 288h120v16H120zM256 288h120v16H256zM120 320h120v16H120zM256 320h120v16H256z" />
   </svg>
-)
-export default WebDevelopment
+);
+export default WebDevelopment;

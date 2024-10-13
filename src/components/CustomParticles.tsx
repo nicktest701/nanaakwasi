@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
+import Particles, { initParticlesEngine, } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import { IOptions, RecursivePartial } from "@tsparticles/engine";
 
 function CustomParticles() {
   const [init, setInit] = useState(false);
@@ -20,13 +21,14 @@ function CustomParticles() {
     });
   }, []);
 
-  const options = useMemo(
+  const options:RecursivePartial<IOptions>  = useMemo(
     () => ({
       background: {
         color: {
           value: "transparent",
         },
       },
+    
       fpsLimit: 120,
       interactivity: {
         events: {
@@ -56,7 +58,7 @@ function CustomParticles() {
         links: {
           color: "#ffffff",
           distance: 150,
-          enable: true,
+          // enable: false,
           opacity: 0.5,
           width: 1,
         },
@@ -70,6 +72,7 @@ function CustomParticles() {
           speed: 1,
           straight: false,
         },
+
         number: {
           density: {
             enable: true,

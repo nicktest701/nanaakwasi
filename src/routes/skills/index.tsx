@@ -16,7 +16,7 @@ function Skills() {
       <Content> 
         <Title title="Skills" />
 
-        <div className="">
+        <div className="w-full overflow-clip">
           <div className="space-y-6">
             <h3 className="text-2xl md:text-4xl text-center">
               Skills & Expertise{" "}

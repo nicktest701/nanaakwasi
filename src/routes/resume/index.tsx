@@ -6,33 +6,41 @@ import { Briefcase, School2Icon } from "lucide-react";
 const Resume = () => {
   const educationData = [
     {
-      title: "Master of Computer Science",
-      year: "2015 - 2016",
-      institution: "University of XYZ",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "Bachelor of Information Technology",
+      year: "2017 - 2021",
+      institution: "University of Education, Winneba",
+       description: "",
     },
     {
-      title: "Bachelor of Computer Science",
-      year: "2010 - 2014",
-      institution: "University of ABC",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "General Science",
+      year: "2010 - 2013",
+      institution: "Prempeh College",
+       description: "",
     },
   ];
 
   const experienceData = [
     {
-      title: "Senior Software Developer",
-      year: "Jan 2020 - Present",
-      company: "Tech Solutions Inc.",
+      title: "✔	Facilitator and Tech Support",
+      year: "August 2024 - Present",
+      company: "Akaal Skill Development Academy | Ejisu, Ghana",
       description:
-        "Developing scalable web applications and leading a team of developers.",
+        "● Trained and developed students’ skills in word-processing, spreadsheet and database programs.",
     },
     {
-      title: "Junior Developer",
-      year: "Jan 2016 - Dec 2019",
-      company: "InnovateX",
+      title: "✔	IT Specialist and Tech Support",
+      year: "July 2022 - Present",
+      company: "Kumawu Technical Institute | Kumawu, Ghana",
       description:
-        "Contributed to the development of several projects using React and Node.js.",
+        "● Support in technical and administrative work in student enrollment.",
+    },
+
+    {
+      title: "✔	Programmer and Tech Support",
+      year: "September 2021 - September 2022",
+      company: "Kodie District Assembly | Kumasi, Ghana",
+      description:
+        "● Completed redesign of existing website and Supported in technical and administrative tasks.",
     },
   ];
 

@@ -8,11 +8,11 @@ function About() {
       <Content startDirection="right">
         <Title title="About Me" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
           <div className="p-2  overflow-hidden ">
             <CustomImage
-              highQualitySrc="/images/me/me-3.jpg"
-              lowQualitySrc="/images/me/me-3_low.jpg"
+              highQualitySrc="/images/me/me-5.JPG"
+              lowQualitySrc="/images/me/me-5.JPG"
               alt="my profile"
               title="Profile Image"
               className=" md:h-[500px] object-contain"
@@ -30,7 +30,7 @@ function About() {
               <h3 className="text-2xl md:text-4xl">
                 Hi There! I'm Nana Akwasi
               </h3>
-              <h4 className="text-lg text-primary-500 pb-6">
+              <h4 className="text-lg text-primary-500 pb-2">
                 Software Developer
               </h4>
             </div>
@@ -41,22 +41,42 @@ function About() {
               individuals on projects that make a positive impact.
             </p>
             <div className="space-y-4 pb-6">
-              <div className="flex items-center ">
-                <p className="w-32">Birthday</p> <p>:{"  "}19th June 1995</p>
+              <div className="flex flex-col md:flex-row items-start md:items-center ">
+                <p className="w-24">Birthday</p>
+                <p>
+                  <span className="hidden md:inline-flex">:</span> 19th June
+                  1995
+                </p>
               </div>
-              <div className="flex items-center ">
-                <p className="w-32">Email</p>{" "}
-                <p>:{"  "}Kwasiowusuansah00@gmail.com</p>
+              <div className="flex flex-col md:flex-row items-start md:items-center ">
+                <p className="w-24">Email</p>
+                <p>
+                  <span className="hidden md:inline-flex">:</span>
+                  Kwasiowusuansah00@gmail.com
+                </p>
               </div>
-              <div className="flex items-center ">
-                <p className="w-32">Phone</p> <p>:{"  "}+233543772591</p>
+              <div className="flex flex-col md:flex-row items-start md:items-center ">
+                <p className="w-24">Phone</p>
+                <p>
+                  <span className="hidden md:inline-flex">:</span>
+                  {"  "}+233543772591
+                </p>
               </div>
-              <div className="flex items-center ">
-                <p className="w-32">From</p> <p>:{"  "}Kronum,Kumasi</p>
+              <div className="flex flex-col md:flex-row items-start md:items-center ">
+                <p className="w-24">From</p>
+                <p>
+                  <span className="hidden md:inline-flex">:</span>
+                  {"  "}Kronum,Kumasi
+                </p>
               </div>
             </div>
             <div>
-              <a className="px-4 py-4 rounded-full text-secondary-500 bg-primary-500 font-medium cursor-pointer hover:bg-secondary-500 hover:text-primary-500 hover:border hover:border-primary-500">
+              <a
+                download={true}
+                href="./resume/KWASI_OWUSU_ANSAH.pdf"
+                target="_blank"
+                className="px-4 py-4 rounded-full text-secondary-500 bg-primary-500 font-medium cursor-pointer hover:bg-secondary-500 hover:text-primary-500 hover:border hover:border-primary-500"
+              >
                 Download CV
               </a>
             </div>

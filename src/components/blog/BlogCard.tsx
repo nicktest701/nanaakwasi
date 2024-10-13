@@ -1,6 +1,6 @@
 // replace with the actual path to your image
 
-import { Link } from "react-router-dom";
+
 import PostButton from "../custom/buttons/PostButton";
 
 type BlogCardProps = {

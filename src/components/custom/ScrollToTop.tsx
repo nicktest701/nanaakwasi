@@ -14,7 +14,7 @@ function ScrollToTop() {
       setScrollPosition(window.scrollY);
 
       clearTimeout(timeout);
-      timeout = setTimeout(() => {
+      setTimeout(() => {
         setScrolling(false);
       }, 200); // Time after the scroll stops
     };

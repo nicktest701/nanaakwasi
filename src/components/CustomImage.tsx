@@ -32,7 +32,7 @@ const CustomImage = ({
         src={lowQualitySrc}
         alt={alt}
         className={cn(
-          "transition-opacity duration-500 ease-in-out opacity-100 blur-[5px]",
+          "transition-opacity duration-500 ease-in-out opacity-100 blur-[5px] object-cover filter grayscale",
           loadedHighRes && "opacity-0",
           className
         )}
@@ -45,7 +45,7 @@ const CustomImage = ({
           src={highQualitySrc}
           alt={alt}
           className={cn(
-            "absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-100",
+            "absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-100  filter grayscale",
             className
           )}
           loading="lazy"

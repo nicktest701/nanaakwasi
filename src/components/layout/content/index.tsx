@@ -6,15 +6,9 @@ type ContentProps = {
   className?: string;
   startDirection?: "left" | "right" | "top";
 };
-function Content({
-  startDirection = "top",
-  children,
-  className,
-}: ContentProps) {
+function Content({ children, className }: ContentProps) {
   return (
-    <div
-      className={cn("max-w-screen-xl mx-auto px-4 py-12 ", className)}
-    >
+    <div className={cn("max-w-screen-xl mx-auto px-4 py-12 ", className)}>
       {children}
     </div>
   );

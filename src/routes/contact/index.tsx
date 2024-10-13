@@ -114,7 +114,8 @@ const Contact = () => {
             <div className="w-full lg:w-1/3 text-gray-400">
               <h2 className="text-3xl font-bold mb-6">Contact Info</h2>
               <p className="mb-6">
-              Feel free to reach out! I’m here to help you bring your ideas to life.
+                Feel free to reach out! I’m here to help you bring your ideas to
+                life.
               </p>
 
               <div className="mb-4 flex items-start gap-4">
@@ -190,6 +191,7 @@ const Contact = () => {
                 </p>
                 <div className="flex space-x-4">
                   <a
+                  title="facebook profile url"
                     href="#"
                     className="bg-gray-800 p-3 rounded-full hover:bg-primary-500 transition"
                   >
@@ -203,14 +205,16 @@ const Contact = () => {
                     </svg>
                   </a>
                   <a
+                    title="tiktok profile url"
                     href="https://www.tiktok.com/@nana_akwasi_o?_t=8qTo0f1tkTG&_r=1"
                     target="_blank"
                     rel="noopener"
                     className="bg-gray-800 p-3 rounded-full hover:bg-primary-500 transition"
                   >
-                    <Tiktok fill="currentColor" className="w-6 h-6" />
+                    <Tiktok className="w-6 h-6" />
                   </a>
                   <a
+                  title='profile url'
                     href="#"
                     className="bg-gray-800 p-3 rounded-full hover:bg-primary-500 transition"
                   >
@@ -224,6 +228,7 @@ const Contact = () => {
                     </svg>
                   </a>
                   <a
+                    title="linkedin profile url"
                     href="https://linkedin.com/in/kwasi-owusu-ansah-24484b238"
                     target="_blank"
                     rel="noopener"
