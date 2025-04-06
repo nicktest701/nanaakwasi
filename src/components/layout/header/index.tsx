@@ -31,7 +31,7 @@ function Header() {
     >
       <nav
         className={cn(
-          "relative w-full max-w-screen-xl   flex justify-center items-center p-4 "
+          "relative w-full max-w-screen-xl   flex justify-center items-center px-4 "
         )}
       >
         <a href="/#" className="flex items-center flex-1 flex-grow">

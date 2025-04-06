@@ -57,10 +57,10 @@ const SkillsCategories: React.FC = () => {
     skills,
     direction = "left",
   }) => (
-    <div>
-      <h2 className="text-2xl font-bold mb-4 mt-8 pl-8">{title}</h2>
+    <div className=''>
+      <h2 className="text-2xl font-bold mb-4 mt-8 pl-4 md:pl-8">{title}</h2>
 
-      <div className="relative overflow-hidden w-full">
+      <div className="relative w-full">
         {/* <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-secondary-100"></div>
         <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-secondary-100"></div>
@@ -80,13 +80,13 @@ const SkillsCategories: React.FC = () => {
   );
 
   return (
-    <div className="relative bg-secondary-900 bg-opacity-70 text-white p-8">
+    <div className="relative bg-secondary-900 bg-opacity-70 text-white py-8">
       <div className="absolute left-0 top-0 h-full w-28 z-20 bg-gradient-to-r from-secondary-500   to-transparent"></div>
       <div className="absolute right-0 top-0 h-full w-28 z-20 bg-gradient-to-l from-secondary-500  to-transparent"></div>
       <div className="absolute  top-0 left-0 right-0 h-28 w-full z-20 bg-gradient-to-b from-secondary-500  to-transparent"></div>
       <div className="absolute bottom-0 left-0 right-0  h-28 w-full z-20 bg-gradient-to-t from-secondary-500  to-transparent"></div>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto overflow-clip ">
         {/* Languages */}
         <SkillCategory title="Languages" skills={languages} />
 

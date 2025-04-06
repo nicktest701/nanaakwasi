@@ -9,13 +9,13 @@ const Resume = () => {
       title: "Bachelor of Information Technology",
       year: "2017 - 2021",
       institution: "University of Education, Winneba",
-       description: "",
+      description: "",
     },
     {
       title: "General Science",
       year: "2010 - 2013",
       institution: "Prempeh College",
-       description: "",
+      description: "",
     },
   ];
 
@@ -29,7 +29,7 @@ const Resume = () => {
     },
     {
       title: "✔	IT Specialist and Tech Support",
-      year: "July 2022 - Present",
+      year: "November 2022 - Present",
       company: "Kumawu Technical Institute | Kumawu, Ghana",
       description:
         "● Support in technical and administrative work in student enrollment.",
@@ -45,10 +45,10 @@ const Resume = () => {
   ];
 
   return (
-    <section id="resume" className="bg-secondary-900 text-white py-12 px-6">
-      <Content startDirection="left" className="container mx-auto">
+    <section id="resume" className="bg-secondary-900 text-white py-12 ">
+      <Content className='px-6'>
         <Title title="Resume" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Education Section */}
           <div
             data-aos="zoom-out-up"

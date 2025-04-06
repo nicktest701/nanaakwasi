@@ -52,14 +52,19 @@ export default {
           '100%': { transform: 'translateX(100%)' },
         },
       },
-      animation: {
-        borderMove: 'borderMove 4s linear infinite',
-        spinBorder: 'spinBorder 2s linear infinite',
-        marqueeLeft: 'marqueeLeft 60s linear infinite',
-        marqueeRight: 'marqueeRight 60s linear infinite',
-      }
-
+      marquee: {
+        from: { transform: 'translateX(0)' },
+        to: { transform: 'translateX(calc(-100% - var(--gap)))' },
+      },
     },
+    animation: {
+      marquee: 'marquee var(--duration) linear infinite',
+      borderMove: 'borderMove 4s linear infinite',
+      spinBorder: 'spinBorder 2s linear infinite',
+      marqueeLeft: 'marqueeLeft 60s linear infinite',
+      marqueeRight: 'marqueeRight 60s linear infinite',
+    }
+
   },
   plugins: [],
 }

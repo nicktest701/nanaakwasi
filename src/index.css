@@ -4,6 +4,11 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --gap: 8px;
+    --duration: 400ms;
+  }
+
   * {
     font-family: "Inter", "Raleway", system-ui;
     font-optical-sizing: auto;
@@ -11,18 +16,15 @@
     smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
   }
   html {
     scroll-behavior: smooth;
-    scroll-padding-block: 100px;
+    scroll-padding-block: 80px;
   }
   body {
     /* font-size: 17px; */
     font-weight: 300;
-    
+    overflow-x: hidden !important;
   }
 
   h1,
@@ -86,6 +88,5 @@
 
 @layer utilities {
 }
-
 
 /* #tsparticles { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 0; } */

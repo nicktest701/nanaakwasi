@@ -48,7 +48,7 @@ function Portfolio() {
       <Content>
         <Title title="Projects" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}

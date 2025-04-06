@@ -37,15 +37,15 @@ const Hero = () => {
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-secondary-900">
       <motion.div
         id="home"
-        className="relative min-h-screen bg-cover bg-center flex items-center justify-center  pt-20"
+        className="relative min-h-screen bg-secondary-900 bg-cover bg-center flex items-center justify-center  pt-20"
         style={{
           backgroundImage,
         }}
       >
-        <div className="absolute inset-0 bg-cover min-h-screen opacity-10">
+        <div className="absolute inset-0 bg-cover opacity-10 bg-secondary-900">
           <img
             src="/images/bg/bg-1.jpg"
             className="w-full h-full object-cover filter grayscale"
@@ -103,9 +103,9 @@ const Hero = () => {
               )}
             >
               <Instagram className="size-8 fill-white/50 group-hover:fill-primary-500  transition-transform duration-500" />
-              <span className="w-0 opacity-0 transition-transform duration-0 linear group-hover:w-full group-hover:text-primary-500  group-hover:opacity-100  ">
+              {/* <span className="w-0 opacity-0 transition-transform duration-0 linear group-hover:w-full group-hover:text-primary-500  group-hover:opacity-100  ">
                 Instagram
-              </span>
+              </span> */}
             </a>
             <a
               href="https://linkedin.com/in/kwasi-owusu-ansah-24484b238"
@@ -116,9 +116,9 @@ const Hero = () => {
               )}
             >
               <Linkedin className="size-8 fill-white/50 group-hover:fill-primary-500  transition-transform duration-500" />
-              <span className="w-0 opacity-0 transition-transform duration-0 linear group-hover:w-full group-hover:text-primary-500  group-hover:opacity-100  ">
+              {/* <span className="w-0 opacity-0 transition-transform duration-0 linear group-hover:w-full group-hover:text-primary-500  group-hover:opacity-100  ">
                 Linkedin
-              </span>
+              </span> */}
             </a>
             <a
               href="https://www.tiktok.com/@nana_akwasi_o?_t=8qTo0f1tkTG&_r=1"
@@ -129,10 +129,21 @@ const Hero = () => {
               )}
             >
               <Tiktok className="size-8 fill-white/50 group-hover:fill-primary-500  transition-transform duration-500" />
-              <span className="w-0 opacity-0 transition-transform duration-0 linear group-hover:w-full group-hover:text-primary-500  group-hover:opacity-100  ">
+              {/* <span className="w-0 opacity-0 transition-transform duration-0 linear group-hover:w-full group-hover:text-primary-500  group-hover:opacity-100  ">
                 Tik Tok
-              </span>
+              </span> */}
             </a>
+
+            <>
+      <a className="group relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full  font-medium text-neutral-200  transition-all duration-300 hover:w-32">
+        <div className="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100">
+          Visit
+        </div>
+        <div className="absolute right-3.5">
+        <Tiktok className="size-8 fill-white/50 group-hover:fill-primary-500" />
+        </div>
+      </a>
+    </>
           </div>
           <motion.button
             style={{
@@ -145,7 +156,7 @@ const Hero = () => {
             whileTap={{
               scale: 0.985,
             }}
-            className="flex justify-center gap-2 py-3 items-center mx-auto shadow-xl text-lg bg-transparent backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-primary-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+            className="flex justify-center gap-2 py-3 items-center mx-auto shadow-xl text-lg bg-transparent backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-primary-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4  overflow-hidden border-2 rounded-full group"
           >
             <a href="#contact" className="flex text-white">
               Hire Me

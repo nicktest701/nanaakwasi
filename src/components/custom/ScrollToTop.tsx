@@ -3,26 +3,26 @@ import { ArrowUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
 function ScrollToTop() {
-  const [scrolling, setScrolling] = useState(false);
+  // const [scrolling, setScrolling] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
-    let timeout: number;
+    // let timeout: number;
 
     const handleScroll = () => {
-      setScrolling(true);
+      // setScrolling(true);
       setScrollPosition(window.scrollY);
 
-      clearTimeout(timeout);
-      setTimeout(() => {
-        setScrolling(false);
-      }, 200); // Time after the scroll stops
+      // clearTimeout(timeout);
+      // setTimeout(() => {
+      //   // setScrolling(false);
+      // }, 200); // Time after the scroll stops
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      clearTimeout(timeout);
+      // clearTimeout(timeout);
     };
   }, []);
 
@@ -39,7 +39,7 @@ function ScrollToTop() {
       className={cn(
         "fixed bottom-10 right-10 p-2 z-[9999] bg-primary-500 rounded-full transition-all duration-700 ease-in-out cursor-pointer",
         scrollPosition < 600 && "opacity-0",
-        scrolling && "hidden"
+        // scrolling && "hidden"
       )}
     >
       <ArrowUp className="text-secondary-500 size-5" />

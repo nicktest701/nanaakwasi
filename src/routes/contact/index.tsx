@@ -59,7 +59,7 @@ const Contact = () => {
       <Content>
         <Title title="Contact Me" />
 
-        <div className=" text-white p-8">
+        <div className=" text-white py-8">
           <div className="container mx-auto flex flex-wrap justify-between">
             {/* Contact Form */}
             <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
@@ -152,7 +152,7 @@ const Contact = () => {
               </div>
               <div className="mb-4 flex items-start gap-4">
                 <span className="p-3  mr-2 flex items-center justify-center border border-primary-500 border-opacity-30 rounded-full">
-                  <PhoneIcon />
+                  <PhoneIcon className="text-primary-500" />
                 </span>
                 <div>
                   <p className="font-semibold text-xl">Phone</p>
@@ -193,12 +193,12 @@ const Contact = () => {
                   <a
                   title="facebook profile url"
                     href="#"
-                    className="bg-gray-800 p-3 rounded-full hover:bg-primary-500 transition"
+                    className="bg-gray-800 p-3 rounded-full hover:bg-primary-500 transition group"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
-                      className="w-6 h-6"
+                      className="w-6 h-6 group-hover:fill-white"
                       viewBox="0 0 24 24"
                     >
                       <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.406.593 24 1.325 24h11.482v-9.294H9.694v-3.622h3.113V8.413c0-3.1 1.893-4.786 4.659-4.786 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.762v2.311h3.589l-.467 3.622h-3.122V24h6.116C23.406 24 24 23.406 24 22.675V1.325C24 .593 23.406 0 22.675 0z" />
@@ -209,19 +209,19 @@ const Contact = () => {
                     href="https://www.tiktok.com/@nana_akwasi_o?_t=8qTo0f1tkTG&_r=1"
                     target="_blank"
                     rel="noopener"
-                    className="bg-gray-800 p-3 rounded-full hover:bg-primary-500 transition"
+                    className="bg-gray-800 p-3 rounded-full hover:bg-primary-500 transition group"
                   >
-                    <Tiktok className="w-6 h-6" />
+                    <Tiktok className="w-6 h-6 group-hover:fill-white" />
                   </a>
                   <a
                   title='profile url'
                     href="#"
-                    className="bg-gray-800 p-3 rounded-full hover:bg-primary-500 transition"
+                    className="bg-gray-800 p-3 rounded-full hover:bg-primary-500 transition group"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
-                      className="w-6 h-6"
+                      className="w-6 h-6 group-hover:fill-white"
                       viewBox="0 0 24 24"
                     >
                       <path d="M24 4.557a9.8 9.8 0 01-2.828.775 4.937 4.937 0 002.165-2.724 9.863 9.863 0 01-3.127 1.196 4.92 4.92 0 00-8.384 4.482 13.955 13.955 0 01-10.141-5.14 4.92 4.92 0 001.524 6.573A4.902 4.902 0 01.964 8.874v.061a4.922 4.922 0 003.946 4.827 4.935 4.935 0 01-2.212.084 4.923 4.923 0 004.598 3.416A9.868 9.868 0 010 19.54 13.901 13.901 0 007.548 22c9.142 0 14.307-7.721 14.307-14.414 0-.22-.006-.437-.016-.654A10.18 10.18 0 0024 4.557z" />
@@ -232,12 +232,12 @@ const Contact = () => {
                     href="https://linkedin.com/in/kwasi-owusu-ansah-24484b238"
                     target="_blank"
                     rel="noopener"
-                    className="bg-gray-800 p-3 rounded-full hover:bg-primary-500 transition"
+                    className="bg-gray-800 p-3 rounded-full hover:bg-primary-500 transition group"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
-                      className="w-6 h-6"
+                      className="w-6 h-6 group-hover:fill-white"
                       viewBox="0 0 24 24"
                     >
                       <path d="M22.23 0H1.77C.792 0 0 .793 0 1.77v20.459C0 23.207.792 24 1.77 24h20.459c.978 0 1.77-.793 1.77-1.771V1.771C24 .793 23.208 0 22.23 0zM7.19 20.339H3.561V9.006H7.19v11.333zm-1.815-12.9c-1.17 0-1.91-.784-1.91-1.751 0-.992.755-1.751 1.949-1.751 1.194 0 1.911.758 1.911 1.751 0 .967-.717 1.751-1.95 1.751zm15.229 12.9h-3.626V15.13c0-1.236-.442-2.08-1.548-2.08-.844 0-1.346.57-1.566 1.119-.08.2-.099.479-.099.758v5.413H9.812s.046-8.779 0-9.694h3.626v1.373c.482-.746 1.341-1.809 3.27-1.809 2.387 0 4.174 1.563 4.174 4.924v6.206z" />
