@@ -8,7 +8,7 @@ type ContentProps = {
 };
 function Content({ children, className }: ContentProps) {
   return (
-    <div className={cn("max-w-screen-xl mx-auto px-4 py-12 ", className)}>
+    <div className={cn("max-w-(--breakpoint-xl) mx-auto px-4 py-12 ", className)}>
       {children}
     </div>
   );
@@ -57,7 +57,7 @@ export default Content;
 //       initial={{ opacity: 0, ...initialPosition() }} // Set initial based on direction
 //       animate={inView ? { opacity: 1, x: 0, y: 0 } : {}} // Animate to final position
 //       transition={{ duration: 0.8, ease: "easeOut", delay: 0, bounce: 0.5 }} // Smooth transition
-//       className={cn("max-w-screen-xl mx-auto px-4 py-12 md:py-24", className)}
+//       className={cn("max-w-(--breakpoint-xl) mx-auto px-4 py-12 md:py-24", className)}
 //     >
 //       {children}
 //     </motion.div>

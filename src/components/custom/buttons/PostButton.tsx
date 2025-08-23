@@ -1,5 +1,5 @@
 import { cn } from "@/utils/cn";
-import  { ReactNode } from "react";
+import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
 type PostButtonProps = {
@@ -13,7 +13,7 @@ const PostButton = ({ children, to, className, ...rest }: PostButtonProps) => {
     <Link
       to={to}
       className={cn(
-        "group relative px-4 py-2 font-medium rounded-full text-slate-100 transition-colors duration-[400ms] hover:text-primary-300",
+        "group relative flex items-center gap-2 px-5 py-3 rounded-lg duration-400 hover:text-primary-300 text-primary-400 font-semibold hover:bg-primary-500/10 transition",
         className
       )}
       {...rest}
@@ -36,3 +36,10 @@ const PostButton = ({ children, to, className, ...rest }: PostButtonProps) => {
 };
 
 export default PostButton;
+
+<a
+  href="#contact"
+  className="flex items-center gap-2 px-5 py-3 rounded-lg border border-primary-500 text-primary-400 font-semibold hover:bg-primary-500/10 transition"
+>
+  Let’s Talk
+</a>;

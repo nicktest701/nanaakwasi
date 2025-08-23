@@ -1,6 +1,7 @@
+// PortFolioCard.tsx
 import { cn } from "@/utils/cn";
 import { ExternalLink } from "lucide-react";
-// replace with the actual path to your image
+import { motion } from "framer-motion";
 
 type PortfolioCardProps = {
   name: string;
@@ -18,45 +19,60 @@ const PortFolioCard = ({
   description,
   technologies,
   link,
+  image,
   index,
 }: PortfolioCardProps) => {
   return (
-    <div
-      data-aos="zoom-out-up"
-      data-aos-easing="ease-in-out"
-      data-aos-duration="500"
-      data-aos-delay={"100"}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      viewport={{ once: true }}
       className={cn(
-        "bg-white/5 backdrop-blur rounded-md p-8   break-inside-avoid mb-4 text-white border border-white/15 cursor-pointer group transition-all duration-500 ease-in-out transform hover:scale-105 ",
-        [5].includes(index) && "mt-8"
+        "relative group bg-white/5 backdrop-blur-lg rounded-xl overflow-hidden border border-white/10 shadow-lg hover:shadow-primary-500/30 transition-all duration-500"
       )}
     >
-      <p className="text-xs">{new Date().toDateString()}</p>
-      <div className="flex  justify-between items-center group py-4">
-        <h3 className="text-xl md:text-2xl font-bold">{name}</h3>
-        {/* <h3 className="text-xl md:text-2xl font-bold">{index}</h3> */}
-        <a
-          target="_blank"
-          title={name}
-          href={link}
-          className="hidden group-hover:inline-flex transition-all duration-500 ease-in-out transform "
-        >
-          <ExternalLink className="text-primary-500" />
-        </a>
-      </div>
-      <p className="text-base">{type}</p>
-      <p className="text-base">{description}</p>
-      <div className=" mb-6 space-x-2">
-        {technologies?.map((item, index) => (
-          <span
-            key={index}
-            className="text-sm md:text-base text-primary-500 border-l border-opacity-25 px-1"
+      {/* Image */}
+      {image && (
+        <div className="overflow-hidden h-48">
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+        </div>
+      )}
+
+      {/* Content */}
+      <div className="p-6 flex flex-col gap-4">
+        <div className="flex justify-between items-center">
+          <h3 className="text-xl font-bold">{name}</h3>
+          <a
+            target="_blank"
+            title={name}
+            href={link}
+            className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
-            {item}
-          </span>
-        ))}
+            <ExternalLink className="text-primary-500 hover:scale-110 transition-transform" />
+          </a>
+        </div>
+
+        <p className="text-sm text-gray-400">{type}</p>
+        <p className="text-sm text-gray-300">{description}</p>
+
+        {/* Tech Stack */}
+        <div className="flex flex-wrap gap-2 mt-2">
+          {technologies?.map((item, index) => (
+            <span
+              key={index}
+              className="text-xs bg-primary-500/10 text-primary-400 px-3 py-1 rounded-full border border-primary-500/20"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

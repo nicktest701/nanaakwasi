@@ -1,67 +1,104 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 
-interface ProjectCardProps {
-  image: string;
-  name: string;
-  type: string;
+interface PortfolioItem {
+  id?: string;
+  title: string;
   description: string;
+  image: string;
+  dataAiHint?: string;
   technologies: string[];
-  link: string;
+  category: string;
+  liveUrl?: string;
+  sourceUrl?: string;
+  featured?: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
+const ProjectCard: React.FC<PortfolioItem> = ({
   image,
-  name,
-  type,
+  title,
+  category,
   description,
   technologies,
-  link,
+  liveUrl,
+  sourceUrl,
 }) => {
   return (
-    <div className="relative group w-full  overflow-hidden rounded-lg shadow-lg">
+    <motion.div
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.98 }}
+      className="relative group w-full overflow-hidden rounded-2xl shadow-lg bg-(--color-secondary-900)/30 backdrop-blur-md border border-white/10"
+    >
       {/* Project Image */}
-      <img
-        src={image}
-        alt={name}
-        className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-125"
-      />
+      <div className="relative">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-64 object-cover rounded-t-2xl transition-transform duration-500 group-hover:scale-110 group-hover:backdrop-blur-xl group-hover:bg-white"
+        />
 
-      {/* Overlay with Tailwind CSS Animation */}
-      <div
-        className="absolute inset-0 bg-secondary-500 bg-opacity-0 flex flex-col justify-end p-4 text-white
-          transform translate-y-full group-hover:translate-y-0 group-hover:bg-opacity-70 transition-all duration-300 "
-      >
-        {/* Project Name */}
-        <h3 className="text-lg md:text-2xl text-white font-semibold mb-2">{name}</h3>
-        {/* Project Type */}
-        <p className="text-sm mb-4">{type}</p>
-        {/* Project Description */}
-        <p className="text-sm mb-2">{description}</p>
-        <div className=" mb-6 space-x-2">
-          {technologies?.map((item, index) => (
+        {/* Gradient overlay on hover */}
+        <div className="absolute inset-0 bg-black/90 md:bg-(--color-secondary-500)/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      </div>
+
+      {/* Content Overlay */}
+      <div className="absolute inset-0 flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-500">
+        <motion.h3
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="text-xl md:text-2xl font-bold text-white"
+        >
+          {title}
+        </motion.h3>
+
+        <p className="text-sm text-white mb-2">{category}</p>
+        <p className="text-sm text-white mb-3 line-clamp-3">{description}</p>
+
+        {/* Technologies */}
+        <div className="flex flex-wrap gap-2 mb-4">
+          {technologies?.map((tech, index) => (
             <span
               key={index}
-              className="text-sm md:text-base text-primary-500 border-l border-opacity-25 px-1"
+              className="text-xs md:text-sm px-3 py-1 bg-white/10 text-primary-400 rounded-full backdrop-blur-sm border border-white/20"
             >
-              {item}
+              {tech}
             </span>
           ))}
         </div>
-        {/* Link to Project */}
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="self-start text-sm md:text-base bg-primary-500 text-black px-2 py-1 md:px-4 md:py-2 rounded-lg font-medium hover:bg-primary-600 transition-colors"
-        >
-          View Project
-        </a>
+
+        {/* Buttons */}
+        <div className="flex gap-3">
+          {liveUrl && (
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-black rounded-lg font-medium hover:bg-primary-600 transition"
+            >
+              <ExternalLink size={16} /> Live
+            </a>
+          )}
+          {sourceUrl && (
+            <a
+              href={sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-white/20 text-white rounded-lg font-medium hover:bg-white/30 transition"
+            >
+              Code
+            </a>
+          )}
+        </div>
       </div>
-      {/* Project Description */}
-      <h3 className="absolute left-2 bottom-0 text-lg md:text-2xl text-primary-500 font-semibold mb-2 group-hover:hidden group-hover:opacity-0">
-        {name}
-      </h3>
-    </div>
+
+      {/* Title always visible (for mobile / no hover) */}
+      <div className="p-4 md:hidden group-hover:hidden">
+        <h3 className="text-lg font-semibold text-primary-400">{title}</h3>
+        <p className="text-xs text-gray-400">{category}</p>
+      </div>
+    </motion.div>
   );
 };
 

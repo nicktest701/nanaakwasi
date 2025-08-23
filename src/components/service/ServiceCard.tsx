@@ -1,28 +1,41 @@
-import  { ReactNode } from "react";
+import { ReactNode } from "react";
+import { motion } from "framer-motion";
 
 type ServiceCardProps = {
   title: string;
   content: string;
   icon: ReactNode;
-  delay: string;
+  delay: number;
 };
+
 function ServiceCard({ title, content, icon, delay }: ServiceCardProps) {
   return (
-    <div
-      data-aos="zoom-in-up"
-      data-aos-easing="ease-in-out"
-      data-aos-duration="500"
-      data-aos-delay={delay}
-      className="bg-white/5 backdrop-blur rounded-md p-8 text-white border border-white/15 cursor-pointer group transition-all duration-500 ease-in-out transform hover:scale-105 "
+    <motion.div
+      initial={{ opacity: 0, y: 50, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, delay: delay / 1000 }}
+      whileHover={{ y: -8, scale: 1.03 }}
+      className="relative bg-white/5 backdrop-blur-md rounded-2xl p-8 text-white border border-white/10 hover:border-primary-500/50 shadow-md hover:shadow-primary-500/20 transition-all duration-500 group"
     >
-      <div className="flex flex-col justify-center items-center space-y-4">
-        <div className="p-8 rounded-full bg-secondary-700 border border-white/15 text-center group-hover:border-primary-500">
-          {icon}
-        </div>
-        <p className="text-2xl group-hover:text-primary-500 text-center">{title}</p>
-        <p className="text-center line-clamp-4">{content}</p>
+      {/* Icon circle */}
+      <div className="flex items-center justify-center w-20 h-20 mx-auto rounded-full bg-secondary-800 border border-white/10 group-hover:border-primary-500 transition-all duration-500 mb-6">
+        {icon}
       </div>
-    </div>
+
+      {/* Title */}
+      <h3 className="text-2xl font-semibold text-center mb-4 group-hover:text-primary-500 transition-colors duration-500">
+        {title}
+      </h3>
+
+      {/* Description */}
+      <p className="text-center text-gray-300 leading-relaxed sm:line-clamp-none line-clamp-5">
+        {content}
+      </p>
+
+      {/* Accent underline */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-primary-500 to-cyan-400 group-hover:w-2/3 transition-all duration-500"></div>
+    </motion.div>
   );
 }
 

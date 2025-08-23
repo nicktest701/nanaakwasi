@@ -37,7 +37,7 @@ function ScrollToTop() {
     <div
       onClick={handleScrollToTop}
       className={cn(
-        "fixed bottom-10 right-10 p-2 z-[9999] bg-primary-500 rounded-full transition-all duration-700 ease-in-out cursor-pointer",
+        "fixed bottom-10 right-10 p-2 z-9999 bg-primary-500 rounded-full transition-all duration-700 ease-in-out cursor-pointer",
         scrollPosition < 600 && "opacity-0",
         // scrolling && "hidden"
       )}

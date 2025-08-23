@@ -7,22 +7,20 @@ import Contact from "../contact";
 import Portfolio from "../portfolio";
 // import Blog from "../blog";
 import BottomFade from "@/components/bottom-fade";
-import MarqueeDemo from "@/components/MarqueeDemo";
+import Review from "@/components/Review";
 
 function Home() {
   return (
     <div className="overflow-hidden">
       <Hero />
 
-      <div className=" bg-secondary-500 relative ">
+      <div className=" bg-(--color-secondary-500) relative ">
         <About />
         <Service />
         <Skills />
         <Resume />
         <Portfolio />
-        <MarqueeDemo/>
-        {/* <Testimonials /> */}
-        {/* <Blog /> */}
+        <Review />
         <Contact />
       </div>
       <BottomFade />

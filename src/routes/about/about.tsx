@@ -1,86 +1,224 @@
+// import CustomImage from "@/components/CustomImage";
+// import Content from "@/components/layout/content";
+// import Title from "@/components/title";
+
+// function About() {
+//   return (
+//     <section id="about" className="relative bg-secondary-500 text-white">
+//       <Content startDirection="right">
+//         <Title title="About Me" />
+
+//         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
+//           <div className="p-2  overflow-hidden ">
+//             <CustomImage
+//               highQualitySrc="/images/me/me-5.JPG"
+//               lowQualitySrc="/images/me/me-5.JPG"
+//               alt="my profile"
+//               title="Profile Image"
+//               className=" md:h-[500px] object-contain"
+//             />
+//           </div>
+//           {/* about me  */}
+//           <div className="flex flex-col gap-6">
+//             <div>
+//               <h3 className="text-2xl md:text-4xl">
+//                 Hi There! I'm Nana Akwasi
+//               </h3>
+//               <h4 className="text-lg text-primary-500 pb-2">
+//                 Software Developer
+//               </h4>
+//             </div>
+//             <p className="font-light text-gray-300 ">
+//               I'm a software developer with a passion for building scalable and
+//               efficient software solutions. I'm always eager to learn and
+//               improve my skills, and I'm excited to collaborate with like-minded
+//               individuals on projects that make a positive impact.
+//             </p>
+//             <div className="space-y-4 pb-6">
+//               <div className="flex flex-col md:flex-row items-start md:items-center ">
+//                 <p className="w-24">Birthday</p>
+//                 <p>
+//                   <span className="hidden md:inline-flex">:</span> 19th June
+//                   1995
+//                 </p>
+//               </div>
+//               <div className="flex flex-col md:flex-row items-start md:items-center ">
+//                 <p className="w-24">Email</p>
+//                 <p>
+//                   <span className="hidden md:inline-flex">:</span>
+//                   Kwasiowusuansah00@gmail.com
+//                 </p>
+//               </div>
+//               <div className="flex flex-col md:flex-row items-start md:items-center ">
+//                 <p className="w-24">Phone</p>
+//                 <p>
+//                   <span className="hidden md:inline-flex">:</span>
+//                   {"  "}+233543772591
+//                 </p>
+//               </div>
+//               <div className="flex flex-col md:flex-row items-start md:items-center ">
+//                 <p className="w-24">From</p>
+//                 <p>
+//                   <span className="hidden md:inline-flex">:</span>
+//                   {"  "}Kronum,Kumasi
+//                 </p>
+//               </div>
+//             </div>
+//             <div>
+//               <a
+//                 download={true}
+//                 href="./resume/KWASI_OWUSU_ANSAH.pdf"
+//                 target="_blank"
+//                 className="px-4 py-4  text-secondary-500 bg-primary-500 font-medium cursor-pointer hover:bg-secondary-500 hover:text-primary-500 hover:border hover:border-primary-500"
+//               >
+//                 Download CV
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+//       </Content>
+//     </section>
+//   );
+// }
+
+// export default About;
+
 import CustomImage from "@/components/CustomImage";
 import Content from "@/components/layout/content";
 import Title from "@/components/title";
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Download } from "lucide-react";
 
 function About() {
   return (
-    <section id="about" className="relative bg-secondary-500 text-white">
-      <Content startDirection="right">
+    <section id="about" className="relative bg-secondary-900 text-white py-16">
+      <Content startDirection="right" className="">
         <Title title="About Me" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
-          <div className="p-2  overflow-hidden ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          {/* Profile Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="relative rounded-2xl overflow-hidden group"
+          >
+            {/* Profile Image */}
             <CustomImage
-              highQualitySrc="/images/me/me-5.JPG"
+              highQualitySrc="/images/me/me.png"
               lowQualitySrc="/images/me/me-5.JPG"
               alt="my profile"
               title="Profile Image"
-              className=" md:h-[500px] object-contain"
+              className="w-full h-[420px] md:h-[500px] scale-110 cursor-zoom-in object-contain rounded-2xl"
             />
-            {/* <img
-              src="/images/me/me-3.jpg"
-              alt=""
-              className="w-full h-full md:h-[500px] object-contain"
-              loading="lazy"
-            /> */}
-          </div>
-          {/* about me  */}
-          <div className="flex flex-col gap-6">
+
+            {/* Gradient Hover Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition" />
+
+            {/* Tech Icons Overlay */}
+            {/* <div className="absolute bottom-4 left-4 flex space-x-3">
+              <img
+                src="/icons/react.svg"
+                alt="React"
+                className="w-8 h-8 drop-shadow-lg"
+              />
+              <img
+                src="/icons/nextjs.svg"
+                alt="Next.js"
+                className="w-8 h-8 drop-shadow-lg"
+              />
+              <img
+                src="/icons/typescript.svg"
+                alt="TypeScript"
+                className="w-8 h-8 drop-shadow-lg"
+              />
+              <img
+                src="/icons/tailwind.svg"
+                alt="Tailwind CSS"
+                className="w-8 h-8 drop-shadow-lg"
+              />
+            </div> */}
+
+            {/* Optional top-right badge */}
+            <div className="absolute top-4 right-4 bg-white/90 text-black text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+              Full-Stack Dev
+            </div>
+          </motion.div>
+
+          {/* About Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex flex-col gap-6"
+          >
             <div>
-              <h3 className="text-2xl md:text-4xl">
-                Hi There! I'm Nana Akwasi
+              <h3 className="text-3xl md:text-4xl font-bold">
+                Hi There! 👋 I'm{" "}
+                <span className="text-primary-400">Nana Akwasi</span>
               </h3>
-              <h4 className="text-lg text-primary-500 pb-2">
+              <h4 className="text-lg text-primary-500 font-medium">
                 Software Developer
               </h4>
             </div>
-            <p className="font-light text-gray-300 ">
-              I'm a software developer with a passion for building scalable and
-              efficient software solutions. I'm always eager to learn and
-              improve my skills, and I'm excited to collaborate with like-minded
-              individuals on projects that make a positive impact.
+
+            <p className="text-gray-300 leading-relaxed">
+              I'm a passionate software developer with experience building
+              modern, scalable, and efficient software solutions. I love
+              learning new technologies, solving problems creatively, and
+              collaborating with others to build products that make a positive
+              impact.
             </p>
-            <div className="space-y-4 pb-6">
-              <div className="flex flex-col md:flex-row items-start md:items-center ">
-                <p className="w-24">Birthday</p>
+
+            {/* Info grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm md:text-base">
+              {/* <div className="flex items-center gap-3">
+                <Calendar className="text-primary-400" size={18} />
                 <p>
-                  <span className="hidden md:inline-flex">:</span> 19th June
-                  1995
+                  <span className="font-medium">Birthday:</span> 19th June 1995
                 </p>
-              </div>
-              <div className="flex flex-col md:flex-row items-start md:items-center ">
-                <p className="w-24">Email</p>
+              </div> */}
+              <div className="flex items-center gap-3">
+                <Mail className="text-primary-400" size={18} />
                 <p>
-                  <span className="hidden md:inline-flex">:</span>
+                  <span className="font-medium">Email:</span>{" "}
                   Kwasiowusuansah00@gmail.com
                 </p>
               </div>
-              <div className="flex flex-col md:flex-row items-start md:items-center ">
-                <p className="w-24">Phone</p>
+              <div className="flex items-center gap-3">
+                <Phone className="text-primary-400" size={18} />
                 <p>
-                  <span className="hidden md:inline-flex">:</span>
-                  {"  "}+233543772591
+                  <span className="font-medium">Phone:</span> +233543772591
                 </p>
               </div>
-              <div className="flex flex-col md:flex-row items-start md:items-center ">
-                <p className="w-24">From</p>
+              <div className="flex items-center gap-3">
+                <MapPin className="text-primary-400" size={18} />
                 <p>
-                  <span className="hidden md:inline-flex">:</span>
-                  {"  "}Kronum,Kumasi
+                  <span className="font-medium">From:</span> Kronum, Kumasi
                 </p>
               </div>
             </div>
-            <div>
+
+            {/* Call to Action */}
+            <div className="flex gap-4 pt-4">
               <a
                 download={true}
                 href="./resume/KWASI_OWUSU_ANSAH.pdf"
                 target="_blank"
-                className="px-4 py-4 rounded-full text-secondary-500 bg-primary-500 font-medium cursor-pointer hover:bg-secondary-500 hover:text-primary-500 hover:border hover:border-primary-500"
+                className="flex items-center gap-2 px-5 py-3 rounded-lg bg-primary-500 text-secondary-900 font-semibold hover:bg-primary-600 transition"
               >
-                Download CV
+                <Download size={18} /> Download CV
+              </a>
+              <a
+                href="#contact"
+                className="flex items-center gap-2 px-5 py-3 rounded-lg border border-primary-500 text-primary-400 font-semibold hover:bg-primary-500/10 transition"
+              >
+                Let’s Talk
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </Content>
     </section>
