@@ -25,7 +25,10 @@ const ProjectCard: React.FC<PortfolioItem> = ({
   sourceUrl,
 }) => {
   return (
-    <motion.div
+    <motion.a
+      href={liveUrl}
+      target="_blank"
+      rel="noopener noreferrer"
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.98 }}
       className="relative group w-full overflow-hidden rounded-2xl shadow-lg bg-(--color-secondary-900)/30 backdrop-blur-md border border-white/10"
@@ -94,11 +97,12 @@ const ProjectCard: React.FC<PortfolioItem> = ({
       </div>
 
       {/* Title always visible (for mobile / no hover) */}
+
       <div className="p-4 md:hidden group-hover:hidden">
         <h3 className="text-lg font-semibold text-primary-400">{title}</h3>
         <p className="text-xs text-gray-400">{category}</p>
       </div>
-    </motion.div>
+    </motion.a>
   );
 };
 

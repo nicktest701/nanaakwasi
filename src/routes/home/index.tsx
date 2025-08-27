@@ -5,7 +5,6 @@ import Skills from "../skills";
 import Resume from "../resume";
 import Contact from "../contact";
 import Portfolio from "../portfolio";
-// import Blog from "../blog";
 import BottomFade from "@/components/bottom-fade";
 import Review from "@/components/Review";
 
