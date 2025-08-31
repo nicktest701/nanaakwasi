@@ -21,29 +21,38 @@ function Review() {
     {
       id: 1,
       content:
-        "Working with Nana Akwasi was a fantastic experience. He delivered our web app ahead of schedule and exceeded our expectations in both design and functionality.",
-      author: "Linda Owusu",
-      role: "Project Manager, TechNova",
+        "Working with Nana Akwasi was a fantastic experience. He delivered our web site ahead of schedule and exceeded our expectations in both design and functionality.",
+      author: "Dr. Ben Bamfo",
+      role: "CEO, Bamfo Herbal Center",
       rating: 5,
-      avatar: "/images/user/user-01.png",
+      avatar: "/images/reviews/bamfo.jpg",
     },
     {
       id: 2,
       content:
         "Nana's attention to detail and problem-solving skills helped us launch a seamless e-commerce platform. Communication was clear and professional throughout.",
-      author: "Samuel Boateng",
-      role: "CTO, ShopEase",
-      rating: 5,
-      avatar: "/images/user/user-02.png",
+      author: "Mr. Gabriel Addai Bediako",
+      role: "CEO, Gab Powerful Consult",
+      rating: 4,
+      avatar: "/images/reviews/gabs.jpg",
     },
     {
       id: 3,
       content:
+        "Nana consistently delivered robust and maintainable projects. His collaborative approach and technical insight added great value to our team.",
+      author: "Mr. Gordon Owusu Yeboah",
+      role: "Principal, Kumawu Technical Institute",
+      rating: 4,
+      avatar: "/images/reviews/kuti.webp",
+    },
+    {
+      id: 4,
+      content:
         "I highly recommend Nana for any React or TypeScript project. He quickly understood our requirements and implemented robust solutions that scaled perfectly.",
-      author: "Akua Mensimah",
-      role: "Lead Developer, FinTech Solutions",
+      author: "Kwame Donkor",
+      role: "Project Manager, Vincere Consult",
       rating: 5,
-      avatar: "/images/user/user-03.png",
+      avatar: "/images/reviews/kwame_donkor.jpg",
     },
   ];
 

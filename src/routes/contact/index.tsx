@@ -34,7 +34,7 @@ const Contact = () => {
         () => {
           toast.error("Failed!", {
             position: "top-right",
-            description: "Could not sen message.Try again ater",
+            description: "Could not send message.Try again later!",
             descriptionClassName: "text-white",
             className: "p-4 bg-secondary-900 text-red-500",
           });
