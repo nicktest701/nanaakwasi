@@ -1,7 +1,7 @@
 [
   {
     "id": "58b1f4f9-06b5-4e60-9e4d-b3c69cf5695d",
-    "image": "/images/portfolio/nothing.PNG",
+    "image": "/images/portfolio/nothing.png",
     "name": "Nothing Website Inspiration",
     "type": "Web App",
     "description": "A marketing website,etc",
@@ -12,7 +12,7 @@
   },
   {
     "id": "586b5d57-0026-4895-b167-e5d51831ad14",
-    "image": "/images/portfolio/epa.PNG",
+    "image": "/images/portfolio/epa.png",
     "name": "EPA HUB",
     "type": "Web App",
     "description": "A figma Design Dashboard Inspiration",
@@ -29,7 +29,7 @@
   },
   {
     "id": "5a9240ad-d4bd-459a-b564-bed45ae2590a",
-    "image": "/images/portfolio/vevol.PNG",
+    "image": "/images/portfolio/vevol.png",
     "name": "Vevol Media",
     "type": "Web Site",
     "description": "A software development company website inspiration.",
@@ -40,7 +40,7 @@
   },
   {
     "id": "dc8db54f-175c-481d-83b1-13d3330416bb",
-    "image": "/images/portfolio/cocoa.PNG",
+    "image": "/images/portfolio/optima.png",
     "name": "Optima Ninja",
     "type": "Web App Site",
     "description": "A software development company website inspiration.",
