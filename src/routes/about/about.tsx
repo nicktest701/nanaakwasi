@@ -22,7 +22,7 @@ function About() {
             {/* Profile Image */}
             <CustomImage
               highQualitySrc="/images/me/me.png"
-              lowQualitySrc="/images/me/me-5.JPG"
+              lowQualitySrc="/images/me/me.jpeg"
               alt="my profile"
               title="Profile Image"
               className="w-full h-[420px] md:h-[500px] scale-110 cursor-zoom-in object-contain rounded-2xl"
@@ -124,7 +124,8 @@ function About() {
                 target="_blank"
                 className="flex items-center gap-2 px-5 py-3 rounded-lg bg-primary-500 text-secondary-900 font-semibold hover:bg-primary-600 transition"
               >
-                <Download size={18} />My Resume
+                <Download size={18} />
+                My Resume
               </a>
               <a
                 href="#contact"
