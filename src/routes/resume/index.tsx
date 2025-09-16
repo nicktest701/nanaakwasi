@@ -26,6 +26,8 @@ const Resume = () => {
       company: "Akaal Skill Development Academy | Ejisu, Ghana",
       description: [
         "Trains and develops students’ skills in programming, software development, wordprocessing, spreadsheet and database programs.",
+        "Install, configure, and maintain computer hardware, software, and network systems.",
+        "Troubleshoots technical issues for end-users and assist with system performance issues.",
       ],
     },
     {
@@ -36,6 +38,7 @@ const Resume = () => {
         "Trains and develops students’ skills in programming, software development, wordprocessing, spreadsheet and database programs.",
         "Support in technical and administrative work in student enrollment.",
         "Generating and analysing students reports.",
+        "Configure, and maintain computer hardware, software, and network systems",
       ],
     },
 
@@ -47,6 +50,8 @@ const Resume = () => {
         "Completed redesign of existing website to improve navigation and enhance visibility.",
         "Supported in technical and administrative tasks.",
         "Generating reports for management decision makings.",
+        "Install, configure, and maintain computer hardware, software, and network systems",
+        "Troubleshoot technical issues for end-users and assist with system performance issues.",
       ],
     },
   ];

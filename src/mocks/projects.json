@@ -89,5 +89,15 @@
     "liveUrl": "https://cocoa-system.onrender.com/",
     "sourceUrl": "#",
     "featured": true
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/nanaakwasi-8d50e.firebasestorage.app/o/frebbytech%2Fportfolio%2Ftac.png?alt=media&token=b853b54b-3a87-4029-aa0f-132a93581959",
+    "title": "Think and Act Sales Inventory",
+    "category": "Web App",
+    "description": "A sales inventory management system designed for Think and Act Enterprise. It enables tracking of products, sales transactions, stock levels, and customer information. The platform provides dashboards for monitoring inventory, generating sales reports, and ensuring efficient business operations.",
+    "technologies": ["Next.js", "Firebase Firestore", "Clerk Auth", "MySQL"],
+    "liveUrl": "https://think-and-act.vercel.app",
+    "sourceUrl": "#",
+    "featured": true
   }
 ]
