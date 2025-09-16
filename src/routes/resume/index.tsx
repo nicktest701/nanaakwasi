@@ -9,7 +9,7 @@ const Resume = () => {
       title: "Bachelor of Information Technology",
       year: "2017 - 2021",
       institution: "University of Education, Winneba",
-      description: "",
+      description: "CPGA (3.86/4.00)",
     },
     {
       title: "General Science",
@@ -21,32 +21,39 @@ const Resume = () => {
 
   const experienceData = [
     {
-      title: "✔	Facilitator and Tech Support",
-      year: "August 2024 - Present",
+      title: "✔	 IT Coordinator and Tech Support",
+      year: "September 2024 - Present",
       company: "Akaal Skill Development Academy | Ejisu, Ghana",
-      description:
-        "● Trained and developed students’ skills in word-processing, spreadsheet and database programs.",
+      description: [
+        "Trains and develops students’ skills in programming, software development, wordprocessing, spreadsheet and database programs.",
+      ],
     },
     {
-      title: "✔	IT Specialist and Tech Support",
+      title: "✔	IT Coordinator",
       year: "November 2022 - Present",
       company: "Kumawu Technical Institute | Kumawu, Ghana",
-      description:
-        "● Support in technical and administrative work in student enrollment.",
+      description: [
+        "Trains and develops students’ skills in programming, software development, wordprocessing, spreadsheet and database programs.",
+        "Support in technical and administrative work in student enrollment.",
+        "Generating and analysing students reports.",
+      ],
     },
 
     {
       title: "✔	Programmer and Tech Support",
       year: "September 2021 - September 2022",
       company: "Kodie District Assembly | Kumasi, Ghana",
-      description:
-        "● Completed redesign of existing website and Supported in technical and administrative tasks.",
+      description: [
+        "Completed redesign of existing website to improve navigation and enhance visibility.",
+        "Supported in technical and administrative tasks.",
+        "Generating reports for management decision makings.",
+      ],
     },
   ];
 
   return (
     <section id="resume" className="bg-secondary-900 text-white py-12 ">
-      <Content className='px-6'>
+      <Content className="px-6">
         <Title title="Resume" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Education Section */}
@@ -103,7 +110,16 @@ const Resume = () => {
                   <h3 className="text-xl font-semibold">{exp.title}</h3>
                   <p className="text-primary-400">{exp.year}</p>
                   <p className="text-lg">{exp.company}</p>
-                  <p className="text-sm text-gray-400">{exp.description}</p>
+                  <ol className="mt-2 list-disc list-inside">
+                    {exp.description?.map((des) => (
+                      <li
+                        key={des}
+                        className="text-sm text-gray-400 pb-1 max-w-[400px]"
+                      >
+                        {des}
+                      </li>
+                    ))}
+                  </ol>
                 </li>
               ))}
             </ul>

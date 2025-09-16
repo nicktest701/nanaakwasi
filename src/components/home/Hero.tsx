@@ -40,7 +40,7 @@ const Hero = () => {
       >
         <div className="absolute inset-0 bg-cover opacity-10 bg-secondary-900">
           <img
-            src="/images/bg/bg-1.jpg"
+            src="/images/me/me.png"
             className="w-full h-full object-cover filter grayscale"
             alt="profile"
           />

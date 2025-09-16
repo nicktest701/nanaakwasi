@@ -138,6 +138,11 @@ const Contact = () => {
                 <div>
                   <p className="font-semibold text-xl">Email</p>
                   <p className="flex items-center ">
+                    <a href="mailto:nicktest701@gmail.com">
+                      nicktest701@gmail.com{" "}
+                    </a>
+                  </p>
+                  <p className="flex items-center ">
                     <a href="mailto:kwasiowusuansah00@gmail.com">
                       kwasiowusuansah00@gmail.com{" "}
                     </a>
@@ -186,13 +191,29 @@ const Contact = () => {
 
               {/* Social Profiles */}
               <div className="mt-6">
-                <p className="mb-4">
-                  Visit my social profile and get connected
-                </p>
+                <p className="mb-4">Visit my profile and get connected</p>
                 <div className="flex space-x-4">
                   <a
-                  title="facebook profile url"
-                    href="#"
+                    title="github profile url"
+                    href="https://github.com/nanaakwasi00"
+                    target="_blank"
+                    rel="noopener"
+                    className="bg-gray-800 p-3 rounded-full hover:bg-primary-500 transition group"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      className="w-6 h-6 group-hover:fill-white"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 2C6.477 2 2 6.484 2 12.012c0 4.418 2.867 8.166 6.839 9.489.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.529 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.254-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.396.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .268.18.579.688.481C19.135 20.174 22 16.426 22 12.012 22 6.484 17.523 2 12 2z" />
+                    </svg>
+                  </a>
+                  <a
+                    title="facebook profile url"
+                    href="https://www.facebook.com/share/16AcvDMDaA/?mibextid=wwXIfr"
+                    target="_blank"
+                    rel="noopener"
                     className="bg-gray-800 p-3 rounded-full hover:bg-primary-500 transition group"
                   >
                     <svg
@@ -214,8 +235,10 @@ const Contact = () => {
                     <Tiktok className="w-6 h-6 group-hover:fill-white" />
                   </a>
                   <a
-                  title='profile url'
-                    href="#"
+                    title="X profile url"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://x.com/nanaakwasi_oo?s=21"
                     className="bg-gray-800 p-3 rounded-full hover:bg-primary-500 transition group"
                   >
                     <svg
@@ -224,7 +247,7 @@ const Contact = () => {
                       className="w-6 h-6 group-hover:fill-white"
                       viewBox="0 0 24 24"
                     >
-                      <path d="M24 4.557a9.8 9.8 0 01-2.828.775 4.937 4.937 0 002.165-2.724 9.863 9.863 0 01-3.127 1.196 4.92 4.92 0 00-8.384 4.482 13.955 13.955 0 01-10.141-5.14 4.92 4.92 0 001.524 6.573A4.902 4.902 0 01.964 8.874v.061a4.922 4.922 0 003.946 4.827 4.935 4.935 0 01-2.212.084 4.923 4.923 0 004.598 3.416A9.868 9.868 0 010 19.54 13.901 13.901 0 007.548 22c9.142 0 14.307-7.721 14.307-14.414 0-.22-.006-.437-.016-.654A10.18 10.18 0 0024 4.557z" />
+                      <path d="M17.53 3H21L14.42 10.29 22.14 21H15.66L10.87 14.62 5.56 21H2L9.03 13.21 1.61 3H8.24L12.59 8.84 17.53 3ZM16.34 19H18.14L7.76 5H5.87L16.34 19Z" />
                     </svg>
                   </a>
                   <a
