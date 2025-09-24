@@ -30,9 +30,8 @@ const Hero = () => {
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
 
   return (
-    <div className="relative overflow-hidden bg-secondary-900">
+    <section id="home" className="relative overflow-hidden bg-secondary-900">
       <motion.div
-        id="home"
         className="relative min-h-screen bg-secondary-900 bg-cover bg-center flex items-center justify-center  pt-20"
         style={{
           backgroundImage,
@@ -65,7 +64,7 @@ const Hero = () => {
                 "w-full block text-2xl sm:text-4xl md:text-6xl  text-primary-500 "
               )}
               as="p"
-              textColors={[color.get()]}
+              textColors={COLORS_TOP}
             />
             <p className="text-gray-300 text-base md:text-xl mt-4 shadow-md w-full max-w-(--breakpoint-md)">
               I'm a self-taught and passionate software developer who enjoys
@@ -133,7 +132,7 @@ const Hero = () => {
       <div className="absolute h-[400px] w-full  overflow-clip">
         <CustomParticles />
       </div>
-    </div>
+    </section>
   );
 };
 

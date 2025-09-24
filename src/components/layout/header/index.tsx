@@ -6,42 +6,47 @@ import { motion, useScroll, useSpring } from "framer-motion";
 
 // Sections for navigation
 const navLinks = [
-  { href: "/#", label: "Home" },
-  { href: "/#about", label: "About" },
-  { href: "/#resume", label: "Resume" },
-  { href: "/#projects", label: "Projects" },
-  { href: "/#contact", label: "Contact" },
+  { id: "home", href: "/#", label: "Home" },
+  { id: "about", href: "/#about", label: "About" },
+  { id: "services", href: "/#services", label: "Services" },
+  { id: "skills", href: "/#skills", label: "Skills" },
+  { id: "resume", href: "/#resume", label: "Resume" },
+  { id: "projects", href: "/#projects", label: "Projects" },
+  { id: "reviews", href: "/#reviews", label: "Reviews" },
+  { id: "contact", href: "/#contact", label: "Contact" },
 ];
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("Home");
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.3 } // section is active when 60% is visible
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
     function onScroll() {
       setIsScrolled(window.scrollY > 50);
-
-      // Active section logic
-      const sections = navLinks.map((link) =>
-        document.querySelector(link.href.replace("/#", "#"))
-      );
-
-      const scrollPos = window.scrollY + 200; // offset for better accuracy
-      for (let i = 0; i < sections.length; i++) {
-        const section = sections[i] as HTMLElement | null;
-        if (section) {
-          const top = section.offsetTop;
-          const bottom = top + section.offsetHeight;
-          if (scrollPos >= top && scrollPos < bottom) {
-            setActiveSection(navLinks[i].label);
-          }
-        }
-      }
     }
 
     window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      observer.disconnect();
+    };
+    console.log(activeSection)
   }, []);
 
   const closeNav = () => setIsOpen(false);
@@ -77,11 +82,11 @@ function Header() {
         <div className="hidden lg:flex items-center space-x-6">
           {navLinks.map((link) => (
             <motion.a
-              key={link.label}
+              key={link.id}
               href={link.href}
               className={cn(
                 "relative text-sm md:text-base uppercase transition-colors duration-300",
-                activeSection === link.label
+                activeSection === link.id
                   ? "text-primary-400 font-semibold"
                   : "text-gray-300 hover:text-primary-300"
               )}
@@ -89,7 +94,7 @@ function Header() {
               whileTap={{ scale: 0.95 }}
             >
               {link.label}
-              {activeSection === link.label && (
+              {activeSection === link.id && (
                 <motion.span
                   layoutId="activeNav"
                   className="absolute -bottom-1 left-0 right-0 mx-auto h-[2px] w-full bg-primary-400 rounded-full"
@@ -123,22 +128,24 @@ function Header() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.4 }}
-          className="fixed left-0 top-16 right-0 bottom-0 bg-secondary-900 flex flex-col items-center justify-start py-10 gap-6 md:hidden"
+          className="fixed left-0 top-16 right-0 bottom-0 bg-secondary-900 flex flex-col items-center justify-start py-10 gap-6 lg:hidden"
         >
           {navLinks.map((link) => (
-            <a
-              key={link.label}
+            <motion.a
+              key={link.id}
               href={link.href}
               onClick={closeNav}
               className={cn(
                 "text-2xl uppercase transition-colors",
-                activeSection === link.label
+                activeSection === link.id
                   ? "text-primary-400 font-semibold"
                   : "text-gray-300 hover:text-primary-200"
               )}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
             >
               {link.label}
-            </a>
+            </motion.a>
           ))}
         </motion.div>
       )}

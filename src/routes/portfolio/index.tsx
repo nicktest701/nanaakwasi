@@ -38,7 +38,8 @@ function Portfolio() {
       description:
         "A professional website for Bamfo Herbal Centre, a Ghanaian herbal clinic specializing in natural remedies for conditions such as hepatitis B, typhoid, and diabetes. The platform features service listings, a virtual herbal store, and a contact system, enabling patients to learn about herbal treatments and connect with the clinic easily.",
       technologies: ["ReactJs", "ExpressJs", "Nodejs", "Firebase"],
-      liveUrl: "https://bamfoherbalcenter.com",
+      liveUrl: "https://bamfoherbalcenter.vercel.app",
+      // liveUrl: "https://bamfoherbalcenter.com",
       sourceUrl: "#",
       featured: true,
     },

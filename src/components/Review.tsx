@@ -79,7 +79,7 @@ function Review() {
   }, [isHovering]);
 
   return (
-    <div className="py-16 md:py-24 bg-secondary-900 relative overflow-hidden">
+    <section id="reviews" className="py-16 md:py-24 bg-secondary-900 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5">
         <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-(--color-secondary-500)"></div>
@@ -217,7 +217,7 @@ function Review() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
