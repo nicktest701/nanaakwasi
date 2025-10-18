@@ -138,8 +138,8 @@ const Contact = () => {
                 <div>
                   <p className="font-semibold text-xl">Email</p>
                   <p className="flex items-center ">
-                    <a href="mailto:nicktest701@gmail.com">
-                      nicktest701@gmail.com{" "}
+                    <a href="mailto:info@nanaakwasi.dev">
+                      info@nanaakwasi.dev{" "}
                     </a>
                   </p>
                   <p className="flex items-center ">
@@ -148,7 +148,6 @@ const Contact = () => {
                     </a>
                   </p>
                   <p>
-                    {" "}
                     <a href="mailto:frebbytechconsults@gmail.com">
                       frebbytechconsults@gmail.com{" "}
                     </a>

@@ -1,6 +1,6 @@
 {
  "name": "Nana Akwasi",
- "short_name": "NanaAkwasi.dev",
+ "short_name": "nana-akwasi.dev",
  "start_url": ".",
  "display_override": ["fullscreen", "minimal-ui"],
  "display": "standalone",
