@@ -21,8 +21,8 @@ function About() {
           >
             {/* Profile Image */}
             <CustomImage
-              highQualitySrc="/images/me/me.png"
-              lowQualitySrc="/images/me/me.jpeg"
+              highQualitySrc="/images/me/nana_akwasi.JPG"
+              lowQualitySrc="/images/me/nana_akwasi_low.JPG"
               alt="my profile"
               title="Profile Image"
               className="w-full h-[420px] md:h-[500px] scale-110 cursor-zoom-in object-contain rounded-2xl"
