@@ -32,6 +32,18 @@ function Portfolio() {
     },
     {
       image:
+        "https://firebasestorage.googleapis.com/v0/b/your-bucket/gpc-scanner.png",
+      title: "GPC Scanner App",
+      category: "Mobile App",
+      description:
+        "A fast and reliable mobile application for scanning and validating e-vouchers, tickets, and digital codes. Features include real-time server verification, duplicate detection, offline fallback, and a clean operator-friendly interface built for events and sales operations.",
+      technologies: ["React Native", "Expo", "Axios", "REST API"],
+      liveUrl: "https://gpcpins.com/downloads/apps/gpcscanner.apk",
+      sourceUrl: "#",
+      featured: true,
+    },
+    {
+      image:
         "https://firebasestorage.googleapis.com/v0/b/nanaakwasi-8d50e.firebasestorage.app/o/frebbytech%2Fportfolio%2Fbamfo.PNG?alt=media&token=eda0e6af-db50-45cd-ac36-11b82acc2548",
       title: "Bamfo Herbal Center",
       category: "Web App",
@@ -59,7 +71,7 @@ function Portfolio() {
         "Firebase Hosting",
       ],
       category: "Web App",
-      liveUrl: "https://vincere-consult.vercel.app",
+      liveUrl: "https://vincereconsult.com",
       sourceUrl: "https://github.com/nanaakwasi/vincere-consult",
       featured: true,
     },
@@ -81,6 +93,18 @@ function Portfolio() {
       category: "Educational Website",
       liveUrl: "https://kuti.vercel.app/",
       sourceUrl: "#",
+      featured: true,
+    },
+    {
+      image:
+        "https://firebasestorage.googleapis.com/v0/b/your-bucket/covid-tracker.png",
+      title: "COVID-19 Tracker",
+      category: "Desktop App",
+      description:
+        "A real-time COVID-19 tracking desktop application that visualizes global and country-specific statistics. Displays confirmed cases, recoveries, deaths, and historical trends using interactive charts. API-powered and optimized for fast data retrieval with a clean JavaFX interface.",
+      technologies: ["Java", "JavaFX", "Retrofit", "REST APIs", "JSON"],
+      liveUrl: "#", // Desktop app
+      sourceUrl: "https://github.com/nicktest701/covid-19-tracker",
       featured: true,
     },
     {
@@ -111,7 +135,7 @@ function Portfolio() {
       description:
         "A school management system designed for efficient administration of student data, academic records, class schedules, and fee management. The system supports authentication, role-based access (admin, teacher, student, parent), and reporting, providing a digital solution for modern educational institutions.",
       technologies: ["ReactJs", "ExpressJs", "Nodejs", "Mongo DB"],
-      liveUrl: "https://school-portal-chi.vercel.app/",
+      liveUrl: "https://frebbys-school-portal.vercel.app/",
       sourceUrl: "#",
       featured: true,
     },
